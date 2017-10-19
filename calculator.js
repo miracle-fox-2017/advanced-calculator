@@ -2,20 +2,38 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number = 1) {
+    this.hasil = number;
   }
-  add () {
+  add (number) {
+    this.hasil += number;
+    return this;
   }
-  substract () {
+  substract (number) {
+    this.hasil -= number;
+    return this;
   }
-  multiply () {
+  multiply (number) {
+    this.hasil *= number;
+    return this;
   }
-  divide () {
+  divide (number) {
+    this.hasil /= number
+    return this;
   }
-  square () {
+  square (number) {
+    this.hasil = Math.pow(this.hasil, 2);
+    return this;
   }
-  squareRoot () {
+  squareRoot (number) {
+    this.hasil = Math.sqrt(this.hasil);
+    return this;
   }
+  Konstanta() {
+    this.hasil = Math.PI * this.hasil;
+    return this;
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
