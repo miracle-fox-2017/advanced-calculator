@@ -27,7 +27,7 @@ class Calculator {
     // console.log('-----setelah itu', this.hasil)
     return this
   }
-  squareRoot () {
+  squareRoot() {
     this.hasil = Math.sqrt(this.hasil)
     // console.log('harusnyaAkarpangkat',Math.sqrt(this.hasil));
     return this
