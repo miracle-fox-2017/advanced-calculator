@@ -1,20 +1,33 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor (angka) {
+    this.angka = angka
+
   }
-  add () {
+  add (angkaKeDua) {
+    this.angka = this.angka + angkaKeDua
+    return this
   }
-  substract () {
+  substract (angkaKeDua) {
+    this.angka = this.angka - angkaKeDua
+    return this
   }
-  multiply () {
+  multiply (angkaKeDua) {
+    this.angka = this.angka * angkaKeDua
+    return this
   }
-  divide () {
+  divide (angkaKeDua) {
+    this.angka = this.angka / angkaKeDua
+    return this
   }
-  square () {
+  square (angkaKeDua) {
+    this.angka = Math.pow(this.angka,angkaKeDua)
+    return this
   }
   squareRoot () {
+    this.angka = Math.round(Math.sqrt(this.angka))
+    return this
   }
 }
 
@@ -25,6 +38,8 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+// let akar = new Calculator(9);
+// console.log(akar.squareRoot())
 
 module.exports = {
   Calculator
