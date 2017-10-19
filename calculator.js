@@ -9,33 +9,27 @@ class Calculator {
     this.wideCircle = null
   }
   add(addNum) {
-    this.addNum = addNum;
-    this.num = this.num + this.addNum;
+    this.num = this.num + addNum;
     return this
   }
   substract (subNum) {
-    this.subNum = subNum;
-    this.num -= this.subNum
+    this.num -= subNum
     return this
   }
   multiply (mulNum) {
-    this.mulNum = mulNum;
-    this.num *= this.mulNum
+    this.num *= mulNum
     return this
   }
   divide (divNum) {
-    this.divNum = divNum
-    this.num /= this.divNum
+    this.num /= divNum
     return this
   }
   square(power) {
-    this.power = power
-    this.num = Math.pow(this.num, this.power)
+    this.num = Math.pow(this.num, power)
     return this
   }
   squareRoot (radius) {
-    this.radius = radius
-    this.wideCircle = this.Pi * Math.pow(this.radius, 2)
+    wideCircle = this.Pi * Math.pow(radius, 2)
     return this
   }
 
