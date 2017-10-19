@@ -3,18 +3,51 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.hello = "My Calculator";
+    this.pi = Math.PI;
+    this.answer = 0;
   }
-  add () {
+  add (num) {
+    this.answer += num;
+    return this;
   }
-  substract () {
+  substract (num) {
+    this.answer -= num;
+    return this;
   }
-  multiply () {
+  multiply (num) {
+    this.answer *= num;
+    return this;
   }
-  divide () {
+  divide (num) {
+    this.answer /= num;
+    return this;
   }
   square () {
+    this.answer = Math.pow(this.answer, 2);
+    return this;
   }
-  squareRoot () {
+  squareRoot (num) {
+    this.answer = Math.sqrt(this.answer);
+    return this;
+  }
+  pow (num) {
+    this.answer = Math.pow(this.answer, num);
+    return this;
+  }
+  round(){
+    this.answer = Math.round(this.answer);
+    return this;
+  }
+
+  showAnswer(){
+    return this.answer;
+  }
+
+  clear(){
+    this.answer = 0;
+    console.log('========== clear ==========');
+    return this;
   }
 }
 
