@@ -2,21 +2,49 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (number) {
+    this.number = number
+    
   }
-  add () {
+  add (input) {
+    this.number += input
+    return this
+    
   }
-  substract () {
+  substract (input) {
+    this.number -= input
+    return this
   }
-  multiply () {
+  multiply (input) {
+    this.number *= input
+    return this
+    
   }
-  divide () {
+  divide (input) {
+    this.number /= input
+    return this
   }
-  square () {
+  pangkat(input) {
+    this.number = Math.pow(this.number, input)
+    return this
   }
-  squareRoot () {
+  Root (input) {
+    this.number = Math.pow(this.number,(1/input))
+    return this
+  }
+  circleArea(){
+    this.number = this.number * this.number * Math.PI
+    return this
+  }
+  print(){
+    return this.number
   }
 }
+
+var casio = new Calculator(24)
+console.log(casio.circleArea().result())
+
+
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
