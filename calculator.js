@@ -1,21 +1,35 @@
 'use strict'
 
 class Calculator {
-  //write your code here
+
   constructor () {
+    this.hasil = 0;
   }
-  add () {
+
+  add(nilaitambah) {
+    this.hasil = this.hasil + nilaitambah;
+    return this;
   }
-  substract () {
+
+  substract (nilaikurang) {
+    this.hasil = this.hasil - nilaikurang;
+    return this;
   }
-  multiply () {
+  multiply (nilaikali) {
+    this.hasil = this.hasil * nilaikali;
+    return this;
   }
-  divide () {
+
+  divide (nilaibagi) {
+    this.hasil = this.hasil / nilaibagi;
+    return this;
   }
-  square () {
+
+  square (nilaipangkat) {
+    this.hasil = Math.pow(this.hasil,nilaipangkat);
+    return this;
   }
-  squareRoot () {
-  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
