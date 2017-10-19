@@ -1,21 +1,62 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
-  }
-  add () {
-  }
-  substract () {
-  }
-  multiply () {
-  }
-  divide () {
-  }
-  square () {
-  }
-  squareRoot () {
-  }
+    //write your code here
+    constructor(angka){
+        this.start=angka;
+        this.hasil="";
+    }
+    add(param){
+        if(this.hasil.toString().length === 0){
+            this.hasil=this.start + param;
+        }else{
+            this.hasil+=param;
+        }
+        return this;
+    }
+    substract(param){
+        if(this.hasil.toString().length === 0){
+            this.hasil=this.start - param;
+        }else{
+            this.hasil-=param;
+        }
+        return this;
+    }
+    multiply(param){
+        if(this.hasil.toString().length === 0){
+            this.hasil=this.start * param;
+        }else{
+            this.hasil*=param;
+        }
+        return this;
+    }
+    divide(param){
+        if(this.hasil.toString().length === 0){
+            this.hasil=this.start / param;
+        }else{
+            this.hasil/=param;
+        }
+        return this;
+    }
+    square(param){
+        if(this.hasil.toString().length === 0){
+            this.hasil=Math.pow(this.start,param);
+        }else{
+            this.hasil=Math.pow(this.hasil,param);
+        }
+        return this;
+    }
+    squareRoot(){
+        if(this.hasil.toString().length === 0){
+            this.hasil=Math.sqrt(this.start)
+        }else{
+            this.hasil=Math.sqrt(this.hasil);
+        }
+        return this;
+    }
+    getResult(){
+        return `Hasilnya adalah : ${this.hasil}`;
+    }
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -26,6 +67,4 @@ class Calculator {
 * - Method Chaining
 */
 
-module.exports = {
-  Calculator
-}
+module.exports = Calculator;
