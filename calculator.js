@@ -4,6 +4,7 @@ class Calculator {
   //write your code here
   constructor (number) {
     this.number = number;
+    this.pi = Math.PI;
   }
 
   add (num) {
@@ -36,9 +37,6 @@ class Calculator {
     return this;
   }
 
-  static pi() {
-    return Math.PI;
-  }
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -51,7 +49,7 @@ class Calculator {
 
 let countNumber = new Calculator(5);
 console.log(countNumber.add(4).substract(3).multiply(2).divide(3).square(3).squareRoot(4).number);
-console.log(Calculator.pi())
+console.log(countNumber.pi)
 
 module.exports = {
   Calculator
