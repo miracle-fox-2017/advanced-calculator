@@ -1,10 +1,9 @@
-// 'use strict'
+'use strict'
 
 class Calculator {
   //write your code here
   constructor (number = 1) {
     this.hasil = number;
-    this.konstanta = Math.PI;
   }
   add (number) {
     this.hasil += number;
@@ -30,6 +29,10 @@ class Calculator {
     this.hasil = Math.sqrt(this.hasil);
     return this;
   }
+  Konstanta() {
+    this.hasil = Math.PI * this.hasil;
+    return this;
+  }
 
 }
 
@@ -41,11 +44,6 @@ class Calculator {
 * - Method Chaining
 */
 
-let cal = new Calculator(0);
-
-cal.add(7).substract(4).multiply(4).divide(3).square(2).squareRoot(4);
-
-
-
-
-
+module.exports = {
+  Calculator
+}
