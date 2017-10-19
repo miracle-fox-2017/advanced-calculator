@@ -2,20 +2,43 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor(number) {
+    this.number = number
+    this.phi = 3.14
   }
-  add () {
+  add(angka) {
+    this.number += angka
+    return this
   }
-  substract () {
+  substract(angka) {
+    this.number -= angka
+    return this
   }
-  multiply () {
+  multiply(angka) {
+    this.number *= angka
+    return this
   }
-  divide () {
+  divide(angka) {
+    this.number /= angka
+    return this
   }
-  square () {
+  square(angka) {
+    this.number = Math.pow(this.number, angka)
+    return this
   }
-  squareRoot () {
+  squareRoot() {
+    this.number = Math.sqrt(this.number)
+    return this
   }
+  circle() {
+    this.number = this.phi * this.number * this.number
+    return this
+  }
+  circumference(diameter) {
+    this.number = this.phi * diameter
+    return this
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
