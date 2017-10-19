@@ -2,20 +2,51 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor(num = 0) {
+    this.num = num
+    return this
   }
-  add () {
+
+  add(input = 0) {
+    this.num += input
+    return this
   }
-  substract () {
+
+  substract(input = 0) {
+    this.num -= input
+    return this
   }
-  multiply () {
+
+  multiply(input = 1) {
+    this.num *= input
+    return this
   }
-  divide () {
+
+  divide(input = 1) {
+    this.num /= input
+    return this
   }
-  square () {
+
+  square(input = 2) {
+    this.num = Math.pow(this.num, input)
+    return this
   }
-  squareRoot () {
+
+  squareRoot() {
+    this.num = Math.sqrt(this.num)
+    return this
   }
+
+  kelilingLingkaran() {
+    this.num = `keliling lingkaran dengan jari-jari ${this.num} adalah ${(Math.PI * 2 * this.num).toFixed(2)}`
+    return this.num
+  }
+
+  luasLingkaran() {
+    this.num = `luas lingkaran dengan jari-jari ${this.num} adalah ${(Math.PI * Math.pow(this.num, 2)).toFixed(2)}`
+    return this.num
+  }
+
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -25,6 +56,15 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+let calculator = new Calculator(3)
+console.log(calculator.add(4).substract(5).multiply(6).divide(3).square(2).squareRoot())
+
+var lingkaran = new Calculator(7)
+console.log(lingkaran.kelilingLingkaran())
+
+var lingkaran = new Calculator(7)
+console.log(lingkaran.luasLingkaran())
 
 module.exports = {
   Calculator
