@@ -9,15 +9,29 @@ class Calculator {
     this.defaultNumber += addNum
     return this
   }
-  substract () {
+  substract (addSubstract) {
+    this.defaultNumber -= addSubstract
+    return this
   }
-  multiply () {
+  multiply (addMultiply) {
+    this.defaultNumber *= addMultiply
+    return this
   }
-  divide () {
+  divide (addDivide) {
+    this.defaultNumber /= addDivide
+    return this
   }
-  square () {
+  square (addSquare) {
+    this.defaultNumber = Math.pow(this.defaultNumber, addSquare);
+    return this
   }
-  squareRoot () {
+  squareRoot() {
+    this.defaultNumber = Math.sqrt(this.defaultNumber)
+    return this
+  }
+  wideCircle() {
+    this.defaultNumber = Math.PI * (this.defaultNumber * this.defaultNumber)
+    return this
   }
 }
 
