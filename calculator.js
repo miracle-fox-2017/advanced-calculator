@@ -3,6 +3,7 @@
 class Calculator {
     //write your code here
     constructor(angka){
+        this.keliling="";
         this.start=angka;
         this.hasil="";
     }
@@ -52,6 +53,16 @@ class Calculator {
         }else{
             this.hasil=Math.sqrt(this.hasil);
         }
+        return this;
+    }
+    kelLingkaran(){
+        let jariJari="";
+        if(this.hasil.toString().length === 0){
+            jariJari=this.start;
+        }else{
+            jariJari=this.hasil;
+        }
+        this.keliling=(jariJari * 2) * 3.14;
         return this;
     }
     getResult(){
