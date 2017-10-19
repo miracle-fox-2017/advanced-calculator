@@ -3,8 +3,11 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.defaultNumber = 0
   }
-  add () {
+  add (addNum) {
+    this.defaultNumber += addNum
+    return this
   }
   substract () {
   }
