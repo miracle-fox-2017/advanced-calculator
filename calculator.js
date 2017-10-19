@@ -1,20 +1,69 @@
 'use strict'
 
 class Calculator {
-  //write your code here
-  constructor () {
+
+  constructor (start, result) {
+    this.start=start;
+    this.result='';
   }
-  add () {
+  add (counter) {
+    if(this.result.toString.length===0){
+      this.result=this.start+counter
+    }
+    else{
+      this.result+=counter
+
+    }
+    return this
   }
-  substract () {
+  substract (counter) {
+    if(this.result.toString.length===0){
+      this.result=this.start-counter
+    }
+    else{
+      this.result-=counter
+
+    }
+    return this
+
   }
-  multiply () {
+  multiply (counter) {
+    if(this.result.toString.length===0){
+      this.result=this.start*counter
+    }
+    else{
+      this.result= this.result*counter
+
+    }
+    return this
   }
-  divide () {
+  divide (counter) {
+    if(this.result.toString.length===0){
+      this.result=this.start/counter
+    }
+    else{
+      this.result=this.result/counter
+
+    }
+    return this
   }
-  square () {
+  square (pangkat) {
+    if(this.result.toString.length===0){
+      this.result=Math.Pow(this.start,pangkat)
+    }
+    else{
+      this.result=Math.Pow(this.result,pangkat)
+
+    }
+    return this
   }
   squareRoot () {
+    if(this.result.toString.length===0){
+      Math.sqrt(this.start)
+    }
+    else{
+      Math.sqrt(this.result)
+    }
   }
 }
 
